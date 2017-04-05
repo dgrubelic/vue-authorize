@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vue.Authorize</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+  <style>
+    html {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    *, html, body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    body {
+      color: #34495e;
+      font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    button {
+      padding: 0 2rem;
+      border-radius: 2rem;
+      display: inline-block;
+      color: #fff;
+      background-color: #4fc08d;
+      transition: all 0.15s ease;
+      box-sizing: border-box;
+      border: 1px solid #4fc08d;
+      line-height: 2rem;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+
+    .button--github     { color: #4078c0; border: 1px solid #4078c0; }
+    .button--facebook   { color: #3b5998; border: 1px solid #3b5998; }
+    .button--google     { color: #ea4335; border: 1px solid #ea4335; }
+    .button--twitter    { color: #1da1f2; border: 1px solid #1da1f2; }
+
+    hr {
+      border: 0;
+      border-bottom: 1px solid #ddd;
+      margin: 2rem 0;
+    }
+
+    #app {
+      margin: 32px auto;
+      max-width: 640px;
+      word-break: break-all;
+    }
+
+    #header {
+      height: 60px;
+      max-width: 640px;
+      min-width: 320px;
+      margin: 0 auto;
+      margin-bottom: 32px;
+    }
+
+    #header .is-authorized-component {
+      display: inline-block;
+    }
+
+    #header .navigation {
+
+    }
+
+    #header .navigation a {
+      color: #34495e;
+      margin: 0 0.6rem;
+      padding-bottom: 5px;
+      text-decoration: none;
+    }
+
+    #header .navigation a:active,
+    #header .navigation a:hover {
+      border-bottom: 3px solid #42b983;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="app">
+    <header id="header">
+      <is-authorized :roles="['user']" class="navigation">
+        <router-link :to="{name: 'index'}">Index</router-link>
+        <router-link :to="{name: 'profile'}">Profile</router-link>
+        <router-link :to="{name: 'logout'}">Logout</router-link>
+      </is-authorized>
+
+      <is-authorized :roles="['guest']" class="navigation">
+        <router-link :to="{name: 'login'}">Login</router-link>
+      </is-authorized>
+    </header>
+
+    <router-view></router-view>
+  </div><!-- /#app -->
+  <script src="index.bundle.js"></script>
+</body>
+</html>
