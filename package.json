@@ -6,7 +6,21 @@
   "scripts": {
     "dev": "gulp dev"
   },
-  "author": "",
+  "keywords": [
+    "vue",
+    "vuejs",
+    "auth",
+    "authorization"
+  ],
+  "author": {
+    "name": "Davor Grubelic",
+    "email": "davor.grubelic@gmail.com",
+    "url": "https://dgrubelic.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dgrubelic/vue-authorize.git"
+  },
   "license": "MIT",
   "dependencies": {
     "vue-authenticate": "^1.0.9"
