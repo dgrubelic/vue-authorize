@@ -1,5 +1,7 @@
 # vue-authorize
 
+[![Join the chat at https://gitter.im/vuejs-auth/vue-authorize](https://badges.gitter.im/vue-authenticate/Lobby.svg)](https://gitter.im/vuejs-auth/vue-authorize?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 **vue-authorize** is a simple authorization library for [Vue.js](https://vuejs.org/) and is an extension of [vue-authenticate](https://github.com/dgrubelic/vue-authenticate) library.
 
 **DISCLAIMER**
