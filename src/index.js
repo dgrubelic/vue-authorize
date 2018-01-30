@@ -13,7 +13,7 @@ function plugin(Vue, options) {
     return
   }
 
-  Vue.directive('isAuthorized', IsAuthorizedDirective)
+  Vue.directive('ifAuthorized', IsAuthorizedDirective)
   Vue.component('isAuthorized', IsAuthorizedComponent)
 
   let vueAuthorizeInstance = null
